@@ -55,7 +55,7 @@ html, body {
 }
 
 body {
-    /* sidebar is position:fixed — no grid needed; content-wrapper uses margin-left */
+    /* sidebar is position:fixed overlay — content-wrapper fills full width */
 }
 
 /* --- Sidebar -------------------------------------- */
@@ -70,6 +70,8 @@ body {
     z-index: 100;
     overflow: hidden;
 }
+.sidebar { transition: transform 320ms var(--ease-out); }
+body.sidebar-collapsed .sidebar { transform: translateX(calc(-1 * var(--sidebar-w))); }
 
 .sidebar-brand {
     display: flex;
@@ -209,7 +211,7 @@ body {
 .user-settings-btn svg { width: 14px; height: 14px; }
 
 /* --- Content Wrapper ------------------------------ */
-.content-wrapper { margin-left: var(--sidebar-w); height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
+.content-wrapper { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
 
 .content-topbar { display: flex; align-items: center; justify-content: space-between; padding: 0 28px; height: 60px; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.08); flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
 
