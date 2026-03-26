@@ -2541,6 +2541,26 @@ function attachInteractions() {
 // ===================================================
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Sidebar toggle — migrate class from <html> (set by inline head script) to <body>,
+    // then re-enable transitions after the first frame.
+    const toggleBtn = document.getElementById('sidebar-toggle');
+    const wasCollapsed = document.documentElement.classList.contains('sidebar-collapsed');
+    if (wasCollapsed) {
+        document.body.classList.add('sidebar-collapsed');
+        document.documentElement.classList.remove('sidebar-collapsed');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+    // Remove the no-transition init class after two frames so it is guaranteed to be
+    // post-paint (single rAF fires before paint; double rAF fires after the frame is committed).
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+        document.documentElement.classList.remove('sidebar-collapsed-init');
+    }));
+    toggleBtn.addEventListener('click', () => {
+        const isNowCollapsed = document.body.classList.toggle('sidebar-collapsed');
+        toggleBtn.setAttribute('aria-expanded', String(!isNowCollapsed));
+        localStorage.setItem('sidebar-collapsed', String(isNowCollapsed));
+    });
+
     document.querySelectorAll('.nav-item[data-view]').forEach(item => {
         item.addEventListener('click', () => navigate(item.dataset.view));
     });
