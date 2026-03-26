@@ -892,16 +892,16 @@ function renderOrgManager() {
 }
 
 const EXT_AUTH = [
-    { days:1,  uhap:'15738749', uhapId:'14738749', lineId:'391042', caseNum:'1782634', client:'1262311', org:'007-001', date:'2025-09-12', diag:'S8992XA', payable:'2127,92', facility:'Oslo University Hospital',       recipientEmail:'claims@nordicsure.no'   },
-    { days:2,  uhap:'15738759', uhapId:'14738759', lineId:'182736', caseNum:'1719483', client:'1168331', org:'143-001', date:'2026-03-04', diag:'R509',    payable:'946,80',  facility:'Rigshospitalet',                 recipientEmail:'auth@cph-insure.dk'     },
-    { days:0,  uhap:'15742576', uhapId:'14742576', lineId:'647291', caseNum:'1756291', client:'1247589', org:'008-005', date:'2026-03-03', diag:'Z0000',   payable:'2244,57', facility:'North Estonia Medical Centre',   recipientEmail:'coverage@baltichealth.ee'},
-    { days:5,  uhap:'15740163', uhapId:'14740163', lineId:'503847', caseNum:'1703847', client:'706093',  org:'008-005', date:'2026-03-03', diag:'E109',    payable:'1184,16', facility:'Tartu University Hospital',      recipientEmail:'coverage@baltichealth.ee'},
-    { days:3,  uhap:'15742575', uhapId:'14742575', lineId:'729384', caseNum:'1748291', client:'1247589', org:'008-005', date:'2026-03-02', diag:'Z1231',   payable:'499,55',  facility:'North Estonia Medical Centre',   recipientEmail:'coverage@baltichealth.ee'},
-    { days:12, uhap:'15741448', uhapId:'14741448', lineId:'103847', caseNum:'1763920', client:'1274223', org:'190-001', date:'2026-02-12', diag:'M1711',   payable:'50,36',   facility:'Helsinki University Hospital',   recipientEmail:'requests@fennia.fi'     },
-    { days:0,  uhap:'15741166', uhapId:'14741166', lineId:'584920', caseNum:'1729384', client:'1322220', org:'190-001', date:'2026-03-04', diag:'J310',    payable:'256,54',  facility:'Helsinki University Hospital',   recipientEmail:'requests@fennia.fi'     },
-    { days:7,  uhap:'15742970', uhapId:'14742970', lineId:'273948', caseNum:'1784736', client:'1190166', org:'007-001', date:'2026-02-26', diag:'J4520',   payable:'298,08',  facility:'St. Olavs Hospital',             recipientEmail:'claims@nordicsure.no'   },
-    { days:0,  uhap:'15746709', uhapId:'14746709', lineId:'839201', caseNum:'1791034', client:'1247589', org:'008-005', date:'2026-03-05', diag:'F411',    payable:'411,57',  facility:'North Estonia Medical Centre',   recipientEmail:'coverage@baltichealth.ee'},
-    { days:1,  uhap:'15746039', uhapId:'14746039', lineId:'461837', caseNum:'1726483', client:'1168331', org:'143-001', date:'2026-03-04', diag:'R509',    payable:'410,16',  facility:'Herlev Hospital',                recipientEmail:'auth@cph-insure.dk'     },
+    { days:1,  uhap:'15738749', uhapId:'14738749', lineId:'391042', caseNum:'1782634', client:'1262311', org:'007-001', date:'2025-09-12', diag:'S8992XA', payable:'2127,92', facility:'Oslo University Hospital',       recipientEmail:'claims@nordicsure.no',    status:'pending' },
+    { days:2,  uhap:'15738759', uhapId:'14738759', lineId:'182736', caseNum:'1719483', client:'1168331', org:'143-001', date:'2026-03-04', diag:'R509',    payable:'946,80',  facility:'Rigshospitalet',                 recipientEmail:'auth@cph-insure.dk',      status:'sent', sentAt:'22 Mar 2026 · 11:47' },
+    { days:0,  uhap:'15742576', uhapId:'14742576', lineId:'647291', caseNum:'1756291', client:'1247589', org:'008-005', date:'2026-03-03', diag:'Z0000',   payable:'2244,57', facility:'North Estonia Medical Centre',   recipientEmail:'coverage@baltichealth.ee',status:'pending' },
+    { days:5,  uhap:'15740163', uhapId:'14740163', lineId:'503847', caseNum:'1703847', client:'706093',  org:'008-005', date:'2026-03-03', diag:'E109',    payable:'1184,16', facility:'Tartu University Hospital',      recipientEmail:'coverage@baltichealth.ee',status:'sent', sentAt:'21 Mar 2026 · 09:14' },
+    { days:3,  uhap:'15742575', uhapId:'14742575', lineId:'729384', caseNum:'1748291', client:'1247589', org:'008-005', date:'2026-03-02', diag:'Z1231',   payable:'499,55',  facility:'North Estonia Medical Centre',   recipientEmail:'coverage@baltichealth.ee',status:'pending' },
+    { days:12, uhap:'15741448', uhapId:'14741448', lineId:'103847', caseNum:'1763920', client:'1274223', org:'190-001', date:'2026-02-12', diag:'M1711',   payable:'50,36',   facility:'Helsinki University Hospital',   recipientEmail:'requests@fennia.fi',      status:'sent', sentAt:'14 Mar 2026 · 16:03' },
+    { days:0,  uhap:'15741166', uhapId:'14741166', lineId:'584920', caseNum:'1729384', client:'1322220', org:'190-001', date:'2026-03-04', diag:'J310',    payable:'256,54',  facility:'Helsinki University Hospital',   recipientEmail:'requests@fennia.fi',      status:'pending' },
+    { days:7,  uhap:'15742970', uhapId:'14742970', lineId:'273948', caseNum:'1784736', client:'1190166', org:'007-001', date:'2026-02-26', diag:'J4520',   payable:'298,08',  facility:'St. Olavs Hospital',             recipientEmail:'claims@nordicsure.no',    status:'sent', sentAt:'19 Mar 2026 · 10:28' },
+    { days:0,  uhap:'15746709', uhapId:'14746709', lineId:'839201', caseNum:'1791034', client:'1247589', org:'008-005', date:'2026-03-05', diag:'F411',    payable:'411,57',  facility:'North Estonia Medical Centre',   recipientEmail:'coverage@baltichealth.ee',status:'pending' },
+    { days:1,  uhap:'15746039', uhapId:'14746039', lineId:'461837', caseNum:'1726483', client:'1168331', org:'143-001', date:'2026-03-04', diag:'R509',    payable:'410,16',  facility:'Herlev Hospital',                recipientEmail:'auth@cph-insure.dk',      status:'pending' },
 ];
 
 function renderExtAuth() {
@@ -915,7 +915,7 @@ function renderExtAuth() {
     const tbody = Object.entries(groups).map(([clientId, invoices]) => {
         const memberName = name(clientId);
         const groupRow = `<tr class="cq-group-row">
-            <td colspan="12">
+            <td colspan="14">
                 <span class="cq-group-label">${memberName}</span>
                 <span class="cq-group-count">${invoices.length} invoice${invoices.length > 1 ? 's' : ''}</span>
                 <button class="btn btn-ghost btn-sm cq-select-all-btn" data-member="${clientId}" style="margin-left:12px;font-size:11.5px;padding:3px 10px">Select All</button>
@@ -942,11 +942,37 @@ function renderExtAuth() {
                     <div class="cq-cc-chips-wrap" data-member="${r.client}"></div>
                 </div>
             </td>
+            <td class="cq-status-cell">${r.status === 'sent'
+                ? `<span class="cq-status-badge cq-sent">Sent</span><div class="cq-status-meta">WKN · ${r.sentAt}</div>`
+                : `<span class="cq-status-badge cq-pending">Pending</span>`
+            }</td>
+            <td style="text-align:center">
+                <button class="btn btn-lime btn-sm cq-done-btn" data-uhap="${r.uhap}">Mark as Done</button>
+            </td>
         </tr>`).join('');
         return groupRow + dataRows;
     }).join('');
 
     return `<div class="view">
+
+        <!-- Mark as Done modal -->
+        <div class="modal-backdrop" id="cq-done-backdrop">
+            <div class="modal modal-sm">
+                <div class="modal-header">
+                    <span class="modal-title">Mark as Done</span>
+                    <button class="modal-close" id="cq-done-close" type="button">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="modal-confirm-text">Mark invoice <span class="modal-confirm-code" id="cq-done-uhap"></span> as done?<br>This will remove it from the queue.</p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-ghost btn-magnetic" id="cq-done-cancel">Cancel</button>
+                    <button class="btn btn-lime btn-magnetic" id="cq-done-confirm">Confirm</button>
+                </div>
+            </div>
+        </div>
 
         <!-- Send Coverage Request modal -->
         <div class="modal-backdrop" id="cq-send-backdrop">
@@ -1054,6 +1080,8 @@ function renderExtAuth() {
                         ${th('Diagnosis')}
                         ${th('Allowed Amount')}
                         <th style="text-align:center">Recipient Email</th>
+                        ${th('Status')}
+                        <th style="text-align:center">Actions</th>
                     </tr></thead>
                     <tbody>${tbody}</tbody>
                 </table>
@@ -2071,13 +2099,45 @@ function attachInteractions() {
             const email = document.getElementById('cq-modal-email').textContent;
             const checkedRows = [...cqTable.querySelectorAll('.cq-check:checked')].map(c => c.closest('tr'));
             const count = checkedRows.length;
+            const now = new Date();
+            const ts = now.toLocaleDateString('en-GB', { day:'numeric', month:'short', year:'numeric' }) + ' · ' +
+                       now.toLocaleTimeString('en-GB', { hour:'2-digit', minute:'2-digit' });
             closeCqModal();
-            showCqToast(`Coverage request sent to ${email} — ${count} invoice${count > 1 ? 's' : ''} dispatched.`);
             checkedRows.forEach(tr => {
-                tr.classList.add('row-removing');
-                tr.addEventListener('transitionend', () => tr.remove(), { once: true });
+                const statusCell = tr.querySelector('.cq-status-cell');
+                if (statusCell) statusCell.innerHTML = `<span class="cq-status-badge cq-sent">Sent</span><div class="cq-status-meta">WKN · ${ts}</div>`;
+                tr.querySelector('.cq-check').checked = false;
             });
             updateCqState();
+            showCqToast(`Coverage request sent to ${email} — ${count} invoice${count > 1 ? 's' : ''} dispatched.`);
+        });
+
+        // Mark as Done — only action that removes rows
+        const cqDoneBackdrop = document.getElementById('cq-done-backdrop');
+        let _cqDoneRow = null;
+        const closeDoneModal = () => { cqDoneBackdrop.classList.remove('open'); _cqDoneRow = null; };
+
+        cqTable.addEventListener('click', e => {
+            const btn = e.target.closest('.cq-done-btn');
+            if (!btn) return;
+            _cqDoneRow = btn.closest('tr');
+            document.getElementById('cq-done-uhap').textContent = btn.dataset.uhap;
+            cqDoneBackdrop.classList.add('open');
+        });
+
+        document.getElementById('cq-done-close').addEventListener('click', closeDoneModal);
+        document.getElementById('cq-done-cancel').addEventListener('click', closeDoneModal);
+        cqDoneBackdrop.addEventListener('click', e => { if (e.target === cqDoneBackdrop) closeDoneModal(); });
+
+        document.getElementById('cq-done-confirm').addEventListener('click', () => {
+            if (!_cqDoneRow) return;
+            const uhap = _cqDoneRow.querySelector('.cq-done-btn').dataset.uhap;
+            const tr = _cqDoneRow;
+            closeDoneModal();
+            tr.classList.add('row-removing');
+            tr.addEventListener('transitionend', () => tr.remove(), { once: true });
+            updateCqState();
+            showCqToast(`Invoice ${uhap} marked as done and removed from queue.`);
         });
     }
 

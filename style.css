@@ -1148,6 +1148,12 @@ body.landing-mode .content-area    { padding: 0; overflow: visible; background: 
 
 .cq-data-row:hover td { background: rgba(255,255,255,0.015); }
 
+.cq-status-cell { white-space: nowrap; }
+.cq-status-badge { display: inline-block; font-size: 10.5px; font-weight: 600; padding: 2px 9px; border-radius: 100px; letter-spacing: 0.2px; }
+.cq-status-badge.cq-pending { background: var(--amber-bg); color: var(--amber); }
+.cq-status-badge.cq-sent    { background: var(--green-bg); color: var(--green); }
+.cq-status-meta { font-size: 10.5px; color: var(--text-500); font-family: var(--font-mono); margin-top: 3px; }
+
 .cq-check { width: 15px; height: 15px; accent-color: var(--lime); cursor: pointer; }
 
 .cq-warning {
