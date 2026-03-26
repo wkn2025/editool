@@ -69,8 +69,8 @@ body {
     top: 0; left: 0;
     z-index: 100;
     overflow: hidden;
+    transition: transform 320ms var(--ease-out);
 }
-.sidebar { transition: transform 320ms var(--ease-out); }
 body.sidebar-collapsed .sidebar { transform: translateX(calc(-1 * var(--sidebar-w))); }
 
 .sidebar-brand {
@@ -505,7 +505,7 @@ body.landing-mode {
     overflow: auto;
 }
 body.landing-mode .sidebar         { display: none; }
-body.landing-mode .content-wrapper { margin-left: 0; height: auto; min-height: 100vh; }
+body.landing-mode .content-wrapper { height: auto; min-height: 100vh; }
 body.landing-mode .content-topbar  { display: none; }
 body.landing-mode .content-area    { padding: 0; overflow: visible; background: var(--surface-1); }
 
