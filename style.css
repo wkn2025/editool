@@ -210,6 +210,63 @@ body.sidebar-collapsed .sidebar { transform: translateX(calc(-1 * var(--sidebar-
 .user-settings-btn:hover { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
 .user-settings-btn svg { width: 14px; height: 14px; }
 
+/* --- Sidebar Toggle Tab --------------------------- */
+#sidebar-toggle {
+    position: fixed;
+    top: 50%;
+    left: var(--sidebar-w);
+    transform: translateY(-50%);
+    z-index: 101; /* one above sidebar z-index: 100 — must stay clickable when sidebar is open */
+    width: 20px;
+    height: 48px;
+    background: var(--navy);
+    border: none;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--lime);
+    transition: left 320ms var(--ease-out), box-shadow 160ms ease;
+    padding: 0;
+}
+
+#sidebar-toggle svg {
+    width: 12px;
+    height: 12px;
+    flex-shrink: 0;
+    transition: transform 320ms var(--ease-out);
+}
+
+#sidebar-toggle:hover {
+    box-shadow: 2px 0 10px rgba(38, 64, 143, 0.4);
+}
+
+#sidebar-toggle:active {
+    transform: translateY(-50%) scale(0.96);
+}
+
+body.sidebar-collapsed #sidebar-toggle {
+    left: 0;
+}
+
+body.landing-mode #sidebar-toggle {
+    display: none;
+}
+
+/* Suppress transition on first load if sidebar was previously collapsed */
+html.sidebar-collapsed-init .sidebar,
+html.sidebar-collapsed-init #sidebar-toggle {
+    transition: none !important;
+}
+
+/* Cover the pre-DOMContentLoaded window when sidebar-collapsed lives on <html> */
+html.sidebar-collapsed .sidebar { transform: translateX(calc(-1 * var(--sidebar-w))); }
+html.sidebar-collapsed #sidebar-toggle { left: 0; }
+
+/* Chevron rotation when collapsed */
+body.sidebar-collapsed #sidebar-toggle svg { transform: rotate(180deg); }
+
 /* --- Content Wrapper ------------------------------ */
 .content-wrapper { height: 100vh; display: flex; flex-direction: column; overflow: hidden; }
 
