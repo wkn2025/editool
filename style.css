@@ -563,7 +563,7 @@ body.landing-mode {
     overflow: auto;
 }
 body.landing-mode .sidebar         { display: none; }
-body.landing-mode .content-wrapper { height: auto; min-height: 100vh; }
+body.landing-mode .content-wrapper { margin-left: 0; height: auto; min-height: 100vh; }
 body.landing-mode .content-topbar  { display: none; }
 body.landing-mode .content-area    { padding: 0; overflow: visible; background: var(--surface-1); }
 
